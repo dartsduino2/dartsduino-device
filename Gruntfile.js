@@ -176,7 +176,7 @@ module.exports = function (grunt) {
                 imagesDir: '<%= config.app %>/images',
                 javascriptsDir: '<%= config.app %>/scripts',
                 fontsDir: '<%= config.app %>/styles/fonts',
-                importPath: '<%= config.app %>/bower_components',
+                // importPath: '<%= config.app %>/bower_components',
                 httpImagesPath: '/images',
                 httpGeneratedImagesPath: '/images/generated',
                 httpFontsPath: '/styles/fonts',
@@ -391,7 +391,7 @@ module.exports = function (grunt) {
     grunt.registerTask('debug', function (platform) {
         var watch = grunt.config('watch');
         platform = platform || 'chrome';
-        
+
         // Configure compass task for debug[server:chrome] task
         watch.compass = {
             files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
